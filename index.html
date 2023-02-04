@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>calculator</title>
+    <style>
+        .calculator-container {
+            background-color:#9494b8;
+            height: 500px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            border-radius: 10px;
+
+        }
+
+        .brand-name {
+            color: rgb(24, 4, 4);
+            margin-top: 10px;
+            margin-left: 20px;
+            padding-top: 20px;
+            font-size: 30px;
+
+        }
+
+        .calculator-screen{
+            background-color: #b8b894;
+;
+            
+            font-size: 50px;
+            width: 350px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+
+        }
+
+        .buttons-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+        .screen-button{
+            background-color: white;
+            padding-top: 3px;
+            height: 40px;
+            width: 60px;
+            margin: 10px;
+            font-size: 30px;
+            border-radius: 10px;
+            border:  2px solid  #a3a375
+;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .screen-button:hover{
+            background-color: aliceblue;
+            box-shadow: 0 2px 5px aliceblue;
+            transition: 0.5s;
+        }
+       
+        .bg-red{
+          background-color: red;
+          color: white;
+           
+        }
+
+        .bg.green{
+            background-color: greenyellow;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="calculator-container" />
+
+    <p class="brand-name"> Flair </p>
+
+    <input type="text" class="calculator-screen" />
+
+    <div class="buttons-container"> 
+        <button class="screen-button">%</button>
+        <button class="screen-button">* </button>
+        <button class="screen-button bg-red" > C</button>
+         <button class="screen-button bg-red">AC</button>
+ </div>
+
+ <div class="buttons-container"> 
+        <button class="screen-button">9 </button>
+        <button class="screen-button">8 </button>
+        <button class="screen-button" >7 </button>
+         <button class="screen-button">+</button>
+    </div>
+
+    <div class="buttons-container"> 
+        <button class="screen-button"> 6</button>
+        <button class="screen-button"> 5</button>
+        <button class="screen-button" > 4</button>
+         <button class="screen-button">- </button>
+    </div>
+    <div class="buttons-container"> 
+        <button class="screen-button"> 3</button>
+        <button class="screen-button"> 2</button>
+        <button class="screen-button" > 1</button>
+         <button class="screen-button"> 0</button>
+    </div>
+    <div class="buttons-container"> 
+        <button class="screen-button">= </button>
+        <button class="screen-button">00 </button>
+        <button class="screen-button" >/ </button>
+         <button class="screen-button">.</button>
+    </div>
+ </div>
+</body>
+
+</html>
