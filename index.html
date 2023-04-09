@@ -75,7 +75,28 @@
        
     </style>
 </head>
+<script>
+    function handleClick(val)
+    {
+     const inputBox = document.getElementById("calculator-screen");
+     inputBox.value = (inputBox.value+val);
+    }
 
+    function clearScreen()
+    {
+        const inputBox = document.getElementById("calculator-screen");
+        inputBox.value = "";
+    }
+
+    
+
+    function calculate()
+    {
+         const inputBox = document.getElementById("calculator-screen");
+         const ans = eval(inputBox.value)
+         inputBox.value = ans;
+    }
+</script>
 <body>
 
 
@@ -84,39 +105,39 @@
 
     <p class="brand-name"> Flair </p>
 
-    <input type="text" class="calculator-screen" />
+    <input type="text" class="calculator-screen" id="calculator-screen" />
 
     <div class="buttons-container"> 
-        <button class="screen-button">%</button>
-        <button class="screen-button">* </button>
+        <button class="screen-button" onclick="handleClick('%')">%</button>
+        <button class="screen-button" onclick="handleClick('*')">* </button>
         <button class="screen-button bg-red" > C</button>
-         <button class="screen-button bg-red">AC</button>
+         <button class="screen-button bg-red" onclick="clearScreen()">AC</button>
  </div>
 
  <div class="buttons-container"> 
-        <button class="screen-button">9 </button>
-        <button class="screen-button">8 </button>
-        <button class="screen-button" >7 </button>
-         <button class="screen-button">+</button>
+        <button class="screen-button" onclick="handleClick(9)">9 </button>
+        <button class="screen-button"onclick="handleClick(8)" >8 </button>
+        <button class="screen-button"onclick="handleClick(7)">7 </button>
+         <button class="screen-button" onclick="handleClick('+')">+</button>
     </div>
 
     <div class="buttons-container"> 
-        <button class="screen-button"> 6</button>
-        <button class="screen-button"> 5</button>
-        <button class="screen-button" > 4</button>
-         <button class="screen-button">- </button>
+        <button class="screen-button"onclick="handleClick(6)"> 6 </button>
+        <button class="screen-button" onclick="handleClick(5)">  5 </button>
+        <button class="screen-button" onclick="handleClick(4)" > 4 </button>
+         <button class="screen-button" onclick="handleClick('-')"> - </button>
     </div>
     <div class="buttons-container"> 
-        <button class="screen-button"> 3</button>
-        <button class="screen-button"> 2</button>
-        <button class="screen-button" > 1</button>
-         <button class="screen-button"> 0</button>
+        <button class="screen-button" onclick="handleClick(3)"> 3</button>
+        <button class="screen-button" onclick="handleClick(2)"> 2</button>
+        <button class="screen-button" onclick="handleClick(1)"> 1</button>
+         <button class="screen-button" onclick="handleClick(0)"> 0</button>
     </div>
     <div class="buttons-container"> 
-        <button class="screen-button">= </button>
-        <button class="screen-button">00 </button>
-        <button class="screen-button" >/ </button>
-         <button class="screen-button">.</button>
+        <button class="screen-button" onclick="calculate('=')">= </button>
+        <button class="screen-button" onclick="clearScreen(00)">00 </button>
+        <button class="screen-button" onclick="clearScreen('/')" >/ </button>
+         <button class="screen-button" onclick="clearScreen('.')">.</button>
     </div>
  </div>
 </body>
